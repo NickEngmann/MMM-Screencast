@@ -19,17 +19,21 @@
   "main": "app.js",
   "scripts": {
     "start": "electron app.js",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "cross-spawn": "^6.0.5",
-    "electron": "^3.0.13",
+    "electron": "^19.0.15",
     "electron-positioner": "3.0.0",
     "node-ipc": "^9.1.1",
-    "peer-dial": "0.0.8"
+    "peer-dial": "0.0.8",
+    "@snyk/protect": "latest"
   },
   "bugs": {
     "url": "https://github.com/kevinatown/MMM-Screencast/issues"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "snyk": true
 }
